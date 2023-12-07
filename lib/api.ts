@@ -38,6 +38,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
   // replace basepath with nex.confi,js
   let itemStr = JSON.stringify(items);
+  console.log(itemStr)
   itemStr = itemStr.replaceAll(/\$\{basePath\}/gi, config.basePath)
   items = JSON.parse(itemStr)
 
